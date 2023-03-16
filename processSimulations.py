@@ -4,7 +4,10 @@ import pandas as pd
 import matplotlib.pylab as plt
 
 dataFile = "traj3.csv"
-fileToProcess = "system_reduced_protein.pdb"
+#fileToProcess = "system_reduced_protein.pdb"
+
+fileToProcess = "../trajs7_ad/system_reduced_protein.pdb"
+dataFile = "traj7.csv"
 
 # inputs 
 protLen=202
