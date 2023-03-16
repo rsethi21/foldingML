@@ -3,10 +3,18 @@ import numpy as np
 import pandas as pd
 import matplotlib.pylab as plt
 
-dataFile = "traj3.csv"
-#fileToProcess = "system_reduced_protein.pdb"
+##
+## Inputs 
+##
 
-fileToProcess = "../trajs7_ad/system_reduced_protein.pdb"
+#task="ProcessData"
+task="GenerateData"
+task="ProcessData"
+
+caseToProcess = "system_reduced_protein.pdb"
+dataFile = "traj3.csv"
+
+caseToProcess = "../trajs7_ad/system_reduced_protein"
 dataFile = "traj7.csv"
 
 # inputs 
@@ -15,20 +23,32 @@ protLen=202
 mask = ":MET@BB" # i can't get resid 1 to work correctly, so this is a workaround
 
 
+##
+## Functions 
+##
 
 # find number of structures
-
 d = {'CYS': 'C', 'ASP': 'D', 'SER': 'S', 'GLN': 'Q', 'LYS': 'K',
      'ILE': 'I', 'PRO': 'P', 'THR': 'T', 'PHE': 'F', 'ASN': 'N',
      'GLY': 'G', 'HIS': 'H', 'LEU': 'L', 'ARG': 'R', 'TRP': 'W',
      'ALA': 'A', 'VAL':'V', 'GLU': 'E', 'TYR': 'Y', 'MET': 'M'}
 
-def ProcessTraj(fileName=""): 
-  traj = pt.iterload(fileToProcess)                 
+def LoadTraj(caseToProcess):
+  # load 
+  if "pdb" not in caseToProcess:
+    trajName = caseToProcess+".xtc"
+    protName = caseToProcess+".pdb"
+    # xtc file needs associated pdb 
+    traj = pt.iterload(trajName,protName)             
+  else: 
+    traj = pt.iterload(caseToProcess)                 
+
+  # get structure info 
   fr_i = traj[0,mask]
   l = pt.get_coordinates(fr_i); 
   nStruct = np.shape(l)[1]
   print("Finding %d structures"%nStruct)
+
   return nStruct,traj
 
 
@@ -148,11 +168,9 @@ def ScoreRMSF(rmsf):
 
 # get all data 
 #nStruct = 10 # 
-task="GenerateData"
-task="ProcessData"
 
 if task is "GenerateData":
-  nStruct,traj = ProcessTraj()           
+  nStruct,traj = LoadTraj(caseToProcess)           
   nStruct=30 
   print("Processing %d"%nStruct)
   copyData = GetTrajData(traj,nStruct = nStruct)
