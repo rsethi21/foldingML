@@ -7,17 +7,6 @@ import matplotlib.pylab as plt
 ## Inputs 
 ##
 
-#task="ProcessData"
-task="GenerateData"
-task="ProcessData"
-
-caseToProcess = "system_reduced_protein.pdb"
-dataFile = "traj3.csv"
-
-caseToProcess = "../trajs7_ad/system_reduced_protein"
-dataFile = "traj7.csv"
-
-# inputs 
 protLen=202
 # firstAtom = "BB  MET B   1"
 mask = ":MET@BB" # i can't get resid 1 to work correctly, so this is a workaround
@@ -169,27 +158,105 @@ def ScoreRMSF(rmsf):
 # get all data 
 #nStruct = 10 # 
 
-if task is "GenerateData":
-  nStruct,traj = LoadTraj(caseToProcess)           
-  nStruct=30 
-  print("Processing %d"%nStruct)
-  copyData = GetTrajData(traj,nStruct = nStruct)
-  df = pd.DataFrame.from_dict(copyData) 
+def doit(mode=None,case=None):
+  print(case,mode)
+  if "traj3" in case:
+    caseToProcess = "../trajs3/system_reduced_protein.pdb"
+    dataFile = "traj3.csv"
+  elif 'traj7' in case:
+    caseToProcess = "../trajs7_ad/system_reduced_protein"
+    dataFile = "traj7.csv"
+  else:
+      raise RuntimeError("dunno this case") 
 
-  # should do pickle eventually) 
-  df.to_csv(dataFile) 
+# inputs 
 
-elif task is "ProcessData":
-  inputFile = dataFile             
-  dfa = pd.read_csv( inputFile )              
-
-  ScoreFasta(dfa)
-
-  out = dataFile.replace('.csv',"_scored.csv") 
-  dfa.to_csv(out)                              
-
+  if mode is "generation":
+    print("Generating data from trajs") 
+    nStruct,traj = LoadTraj(caseToProcess)           
+    nStruct=30 
+    print("Processing %d"%nStruct)
+    copyData = GetTrajData(traj,nStruct = nStruct)
+    df = pd.DataFrame.from_dict(copyData) 
+  
+    # should do pickle eventually) 
+    df.to_csv(dataFile) 
+  
+  elif mode is "postprocess":
+    print("Postprocessing data from trajs") 
+    inputFile = dataFile             
+    dfa = pd.read_csv( inputFile )              
+  
+    ScoreFasta(dfa)
+  
+    out = dataFile.replace('.csv',"_scored.csv") 
+    dfa.to_csv(out)                              
+  else:
+    raise RuntimeError("mode not understood") 
+  
 
 
 
 
   
+#!/usr/bin/env python
+import sys
+##################################
+#
+# Revisions
+#       10.08.10 inception
+#
+##################################
+
+#
+# Message printed when program run without arguments 
+#
+def helpmsg():
+  scriptName= sys.argv[0]
+  msg="""
+Purpose: 
+ 
+Usage:
+"""
+  msg+="  %s -validation" % (scriptName)
+  msg+="""
+  
+ 
+Notes:
+
+"""
+  return msg
+
+#
+# MAIN routine executed when launching this script from command line 
+#
+mode="generation"
+if __name__ == "__main__":
+  import sys
+  msg = helpmsg()
+  remap = "none"
+
+  if len(sys.argv) < 2:
+      raise RuntimeError(msg)
+
+  # Loops over each argument in the command line 
+  for i,arg in enumerate(sys.argv):
+    # calls 'doit' with the next argument following the argument '-validation'
+    if(arg=="-generation"):
+        mode="generation"
+    if(arg=="-postprocess"):
+        mode="postprocess"
+    if(arg=="-case"):
+      arg1=sys.argv[i+1] 
+      doit(mode=mode,case=arg1)
+  
+
+
+
+
+
+  raise RuntimeError("Arguments not understood")
+
+
+
+
