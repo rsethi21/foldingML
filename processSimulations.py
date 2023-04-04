@@ -131,9 +131,9 @@ def GetTrajData(traj,nStruct = 2):
   return copies               
 
 def ScoreFasta(df):
-'''
-Computes the number of negatively charged a.a. (irrespective of protonation) 
-'''
+  """
+  Computes the number of negatively charged a.a. (irrespective of protonation) 
+  """
   feature = "fasta"
   #nEle = len( df.index ) 
   vals = df[feature]
@@ -141,6 +141,9 @@ Computes the number of negatively charged a.a. (irrespective of protonation)
 
   nscores = [ x.count("E")/nRes for x in vals ]
   nscores+= [ x.count("D")/nRes for x in vals ]
+
+  print( len(df), len(nscores)) # , len(df['negativeFasta'] ))
+  quit()
   df['negativeFasta']=nscores
 
   pscores = [ x.count("K")/nRes for x in vals ]
@@ -148,10 +151,10 @@ Computes the number of negatively charged a.a. (irrespective of protonation)
   df['positiveFasta']=pscores
 
 def ScoreProtonation(df,pH=None):
-'''
-Protonation state as determined by protonation.ipynb
-HARD CODED
-'''
+  '''
+  Protonation state as determined by protonation.ipynb
+  HARD CODED
+  '''
   if pH == 3:
       rhoN = -0.052513823529411766 
       rhoP = 0.6387256176470587
@@ -220,6 +223,8 @@ def doit(mode=None,case=None,nStruct=2):
     dfa = pd.read_csv( inputFile )              
   
     ScoreFasta(dfa)
+    val = re.sub('traj',"",case)            
+    ScoreProtonation(dfa,pH=val)
   
     out = dataFile.replace('.csv',"_scored.csv") 
     dfa.to_csv(out)                              
