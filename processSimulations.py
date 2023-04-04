@@ -197,7 +197,7 @@ def ScoreRMSF(rmsf):
 def doit(mode=None,case=None,nStruct=2):
   #print(case,mode)
   if "traj3" in case:
-    caseToProcess = "../trajs3/system_reduced_protein" #.pdb"
+    caseToProcess = "../trajs3/system_reduced_protein.pdb"
     dataFile = "traj3.csv"
   elif 'traj7' in case:
     caseToProcess = "../trajs7_ad/system_reduced_protein"
