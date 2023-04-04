@@ -129,12 +129,41 @@ def GetTrajData(traj,nStruct = 2):
   return copies               
 
 def ScoreFasta(df):
+'''
+Computes the number of negatively charged a.a. (irrespective of protonation) 
+'''
   feature = "fasta"
   #nEle = len( df.index ) 
   vals = df[feature]
   nRes = int(len(vals[0]))
-  scores = [ x.count("E")/nRes for x in vals ]
-  df['negative']=scores
+
+  nscores = [ x.count("E")/nRes for x in vals ]
+  nscores+= [ x.count("D")/nRes for x in vals ]
+  df['negativeFasta']=nscores
+
+  pscores = [ x.count("K")/nRes for x in vals ]
+  pscores+= [ x.count("R")/nRes for x in vals ]
+  df['positiveFasta']=pscores
+
+def ScoreProtonation(df,pH=None):
+'''
+Protonation state as determined by protonation.ipynb
+HARD CODED
+'''
+  if pH == 3:
+      rhoN = -0.052513823529411766 
+      rhoP = 0.6387256176470587
+  elif pH==7:
+      rhoN = -0.621903448275862 
+      rhoP = 6.89655172413793e-08
+  else:
+      raise RuntimeError("pH not understood")
+
+  df['negativepH']=rhoN         
+  df['positivepH']=rhoP         
+  
+
+
 
 import re 
 def stringArToAr(stringAr):
@@ -161,7 +190,7 @@ def ScoreRMSF(rmsf):
 def doit(mode=None,case=None):
   print(case,mode)
   if "traj3" in case:
-    caseToProcess = "../trajs3/system_reduced_protein.pdb"
+    caseToProcess = "../trajs3/system_reduced_protein" #.pdb"
     dataFile = "traj3.csv"
   elif 'traj7' in case:
     caseToProcess = "../trajs7_ad/system_reduced_protein"
@@ -180,6 +209,7 @@ def doit(mode=None,case=None):
     df = pd.DataFrame.from_dict(copyData) 
   
     # should do pickle eventually) 
+    print("Printing to ",dataFile) 
     df.to_csv(dataFile) 
   
   elif mode is "postprocess":
