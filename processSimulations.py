@@ -139,15 +139,16 @@ def ScoreFasta(df):
   vals = df[feature]
   nRes = int(len(vals[0]))
 
-  nscores = [ x.count("E")/nRes for x in vals ]
-  nscores+= [ x.count("D")/nRes for x in vals ]
-
-  print( len(df), len(nscores)) # , len(df['negativeFasta'] ))
-  quit()
+  def tally(vals,aa="E"):
+    scores = [ x.count(aa) for x in vals ]
+    scores = np.sum(scores)/nRes
+    return scores
+  nscores = tally(vals,aa="D")
+  nscores+= tally(vals,aa="E")
   df['negativeFasta']=nscores
 
-  pscores = [ x.count("K")/nRes for x in vals ]
-  pscores+= [ x.count("R")/nRes for x in vals ]
+  pscores = tally(vals,aa="K")
+  pscores+= tally(vals,aa="R")
   df['positiveFasta']=pscores
 
 def ScoreProtonation(df,pH=None):
@@ -155,6 +156,7 @@ def ScoreProtonation(df,pH=None):
   Protonation state as determined by protonation.ipynb
   HARD CODED
   '''
+  pH = int(pH)
   if pH == 3:
       rhoN = -0.052513823529411766 
       rhoP = 0.6387256176470587
