@@ -6,3 +6,7 @@ trajs3_scored.csv - feature file with classification (isFolded) for proteins sim
 trajs3_scored.csv - feature file with classification (isFolded) for proteins simulated at pH 7 
 
 processSimulations.py - this file generates the csv from simulation data. PKH needs to run this, since I have the input simulation files
+
+Original trajectory data are available in 
+ /home/pkekeneshuskey/data/molecular_dynamics/ph_binsun
+ (from Bin Sun)
