@@ -1,4 +1,7 @@
 # foldingML
+Original trajectory data are available in 
+ /home/pkekeneshuskey/data/molecular_dynamics/ph_binsun
+ (from Bin Sun)
 
 ## Read this notebook first 
 prelim.ipynb - very basic notebook for loading two simulation cases (trajs3 and trajs7) that correspond to an ensemble of proteins simulated at different pHs. Once the files are loaded as pandas dataframes, they are run through a decision-tree classification algorithm. Further details are provided inside the ipynb document. 
