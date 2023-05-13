@@ -2,6 +2,7 @@ import pytraj as pt
 import numpy as np 
 import pandas as pd
 import matplotlib.pylab as plt
+import os
 
 ##
 ## Inputs 
@@ -92,7 +93,8 @@ def GetTrajData(traj,nStruct = 2):
     pt.superpose(traj,mask=mask)
     rmsf = pt.rmsf(traj,mask=mask) 
     # values only, not residues
-    np.shape(rmsf) 
+    np.shape(rmsf)
+    origRMSF = rmsf
     rmsf = rmsf[:,1] # index is residue number and column is values at each residue for the 200 frames
   
     # pt.surf
@@ -126,7 +128,7 @@ def GetTrajData(traj,nStruct = 2):
 
     timeseriesContainer = dict()
     timeseriesContainer['RgSeries'] = data ############### extracting time series radius of gyration for forecasting
-    timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(rmsf) ########## extacting average residue rmsf for each time point in each copy
+    timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(origRMSF) ########## extacting average residue rmsf for each time point in each copy
     timeseriesCopies.append(timeseriesContainer)
 
     #container['salt'] = nearest salt molecules 
@@ -198,7 +200,7 @@ def ScoreRg(histo,bins):
 def ScoreRMSF(rmsf):
   return np.mean(rmsf)
 
-def ScoreRMSFSeries(rmsf)
+def ScoreRMSFSeries(rmsf):
   return np.mean(rmsf, axis=1)
 
 
@@ -207,12 +209,12 @@ def ScoreRMSFSeries(rmsf)
 
 def doit(mode=None,case=None,nStruct=2):
   #print(case,mode)
-  if "traj3" in case:
-    caseToProcess = "../trajs3/system_reduced_protein.pdb"
+  if "trajs3" in case:
+    caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
     dataFile = "traj3.csv"
     dataSeries = "traj3Series.csv"
-  elif 'traj7' in case:
-    caseToProcess = "../trajs7_ad/system_reduced_protein"
+  elif 'trajs7' in case:
+    caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
     dataFile = "traj7.csv"
     dataSeries = "traj7Series.csv"
   else:
