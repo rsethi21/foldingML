@@ -66,7 +66,8 @@ def GetFasta(traj,protLen):
 
 
 def GetTrajData(traj,nStruct = 2):
-  copies = []             
+  copies = []   
+  timeseriesCopies = []          
   
   # Assumes all instances are the same 
   # get residue id's 
@@ -84,7 +85,7 @@ def GetTrajData(traj,nStruct = 2):
     #print("%d"%(fin+1)) 
   
     # get atoms for structure
-    mask = "@%d-%d"%(start,fin)
+    mask = "@%d-%d"%(start,fin) ############ are these for all residues??
     #fr_i = traj[0,mask]
 
     # superpose
@@ -92,7 +93,7 @@ def GetTrajData(traj,nStruct = 2):
     rmsf = pt.rmsf(traj,mask=mask) 
     # values only, not residues
     np.shape(rmsf) 
-    rmsf = rmsf[:,1]
+    rmsf = rmsf[:,1] # index is residue number and column is values at each residue for the 200 frames
   
     # pt.surf
     # atomiccorr (end to end distance/correlation? ) 
@@ -100,6 +101,7 @@ def GetTrajData(traj,nStruct = 2):
     # density? 
     # pca
     # pytraj.watershell
+    ################ mol surface??
   
     ## compute radgyr
     data = pt.radgyr( traj, mask=mask)
@@ -111,7 +113,7 @@ def GetTrajData(traj,nStruct = 2):
     #plt.plot(binEdges[0:10],daHisto,label=i)
 
     daHisto=ScoreRg(daHisto,binEdges)
-    rmsf =ScoreRMSF(rmsf)         
+    rmsfHist =ScoreRMSF(rmsf)         
 
     container = dict()
     container['copy'] = i      
@@ -120,7 +122,13 @@ def GetTrajData(traj,nStruct = 2):
     container['RgHist']=daHisto # if you go back to storing arrays, need to use pickle
     container['RgStart']=data[0]
     container['RgEnd']=data[-1]
-    container['RMSF']=rmsf
+    container['RMSFHist']=rmsfHist
+
+    timeseriesContainer = dict()
+    timeseriesContainer['RgSeries'] = data ############### extracting time series radius of gyration for forecasting
+    timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(rmsf) ########## extacting average residue rmsf for each time point in each copy
+    timeseriesCopies.append(timeseriesContainer)
+
     #container['salt'] = nearest salt molecules 
     copies.append(container) 
 
@@ -128,7 +136,7 @@ def GetTrajData(traj,nStruct = 2):
   
   #plt.legend(loc=0)
   #plt.gcf().savefig("test.png") 
-  return copies               
+  return copies, timeseriesCopies         
 
 def ScoreFasta(df):
   """
@@ -190,6 +198,9 @@ def ScoreRg(histo,bins):
 def ScoreRMSF(rmsf):
   return np.mean(rmsf)
 
+def ScoreRMSFSeries(rmsf)
+  return np.mean(rmsf, axis=1)
+
 
 # get all data 
 #nStruct = 10 # 
@@ -199,9 +210,11 @@ def doit(mode=None,case=None,nStruct=2):
   if "traj3" in case:
     caseToProcess = "../trajs3/system_reduced_protein.pdb"
     dataFile = "traj3.csv"
+    dataSeries = "traj3Series.csv"
   elif 'traj7' in case:
     caseToProcess = "../trajs7_ad/system_reduced_protein"
     dataFile = "traj7.csv"
+    dataSeries = "traj7Series.csv"
   else:
       raise RuntimeError("dunno this case") 
 
@@ -212,12 +225,16 @@ def doit(mode=None,case=None,nStruct=2):
     nStructPossible,traj = LoadTraj(caseToProcess)           
     nStruct = np.min([nStruct,nStructPossible])
     print("Processing %d"%nStruct)
-    copyData = GetTrajData(traj,nStruct = nStruct)
-    df = pd.DataFrame.from_dict(copyData) 
+
+    # saving series data
+    copyData, seriesData = GetTrajData(traj,nStruct = nStruct)
+    # df = pd.DataFrame.from_dict(copyData) 
   
+    dfSeries = pd.DataFrame.from_dict(seriesData)
+    dfSeries.to_csv(dataSeries)
     # should do pickle eventually) 
-    print("Printing to ",dataFile) 
-    df.to_csv(dataFile) 
+    # print("Printing to ",dataFile) 
+    # df.to_csv(dataFile) 
   
   elif mode is "postprocess":
     print("Postprocessing data from trajs") 
