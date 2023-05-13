@@ -128,8 +128,8 @@ def GetTrajData(traj,nStruct = 2):
     container['RMSFHist']=rmsfHist
 
     timeseriesContainer = dict()
-    timeseriesContainer['RgSeries'] = data ############### extracting time series radius of gyration for forecasting
-    timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(origRMSF) ########## extacting average residue rmsf for each time point in each copy
+    timeseriesContainer['RgSeries'] = data.tolist() ############### extracting time series radius of gyration for forecasting
+    # timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(origRMSF) ########## extacting average residue rmsf for each time point in each copy
     timeseriesCopies.append(timeseriesContainer)
 
     #container['salt'] = nearest salt molecules 
@@ -213,11 +213,11 @@ def doit(mode=None,case=None,nStruct=2):
   if "trajs3" in case:
     caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
     dataFile = "traj3.csv"
-    dataSeries = "traj3Series.csv"
+    dataSeries = "traj3Series.json"
   elif 'trajs7' in case:
     caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
     dataFile = "traj7.csv"
-    dataSeries = "traj7Series.csv"
+    dataSeries = "traj7Series.json"
   else:
       raise RuntimeError("dunno this case") 
 
