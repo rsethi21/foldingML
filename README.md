@@ -6,6 +6,8 @@ Original trajectory data are available in
 ## Timeseries Forecasting
 Currently will output time series RMSF and Rg but may explore other protein chemistry output from pytraj; first use this as test
 
+Could not pip install pytraj, needed to build locally; follow their instructions
+
 ## Read this notebook first 
 prelim.ipynb - very basic notebook for loading two simulation cases (trajs3 and trajs7) that correspond to an ensemble of proteins simulated at different pHs. Once the files are loaded as pandas dataframes, they are run through a decision-tree classification algorithm. Further details are provided inside the ipynb document. 
 
