@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pylab as plt
 import os
+import json
 
 ##
 ## Inputs 
@@ -231,13 +232,17 @@ def doit(mode=None,case=None,nStruct=2):
     # saving series data
     copyData, seriesData = GetTrajData(traj,nStruct = nStruct)
     # df = pd.DataFrame.from_dict(copyData) 
-  
-    dfSeries = pd.DataFrame.from_dict(seriesData)
-    dfSeries.to_csv(dataSeries)
+    
+    # dfSeries = pd.DataFrame.from_dict(seriesData)
+    # dfSeries.to_csv(dataSeries)
     # should do pickle eventually) 
     # print("Printing to ",dataFile) 
     # df.to_csv(dataFile) 
-  
+    with open(dataSeries, 'w') as file:
+        json.dump(seriesData, file)
+        
+
+
   elif mode is "postprocess":
     print("Postprocessing data from trajs") 
     inputFile = dataFile             
