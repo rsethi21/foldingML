@@ -2,6 +2,9 @@ import pytraj as pt
 import numpy as np 
 import pandas as pd
 import matplotlib.pylab as plt
+import os
+import json
+import pdb
 
 ##
 ## Inputs 
@@ -44,7 +47,7 @@ def LoadTraj(caseToProcess):
 
 def GetFasta(traj,protLen):
     top = traj.top
-
+    print(traj.top)
     # store all residue/indices
     daList=[]
     for residue in top.residues:
@@ -92,7 +95,8 @@ def GetTrajData(traj,nStruct = 2):
     pt.superpose(traj,mask=mask)
     rmsf = pt.rmsf(traj,mask=mask) 
     # values only, not residues
-    np.shape(rmsf) 
+    np.shape(rmsf)
+    origRMSF = rmsf
     rmsf = rmsf[:,1] # index is residue number and column is values at each residue for the 200 frames
   
     # pt.surf
@@ -115,6 +119,9 @@ def GetTrajData(traj,nStruct = 2):
     daHisto=ScoreRg(daHisto,binEdges)
     rmsfHist =ScoreRMSF(rmsf)         
 
+    rmsd = pt.rmsd(traj, mask=mask)
+    # watershell = pt.watershell(traj, mask)
+
     container = dict()
     container['copy'] = i      
     container['fasta'] = fasta
@@ -125,8 +132,14 @@ def GetTrajData(traj,nStruct = 2):
     container['RMSFHist']=rmsfHist
 
     timeseriesContainer = dict()
-    timeseriesContainer['RgSeries'] = data ############### extracting time series radius of gyration for forecasting
-    timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(rmsf) ########## extacting average residue rmsf for each time point in each copy
+    timeseriesContainer['RgSeries'] = data.tolist() ############### extracting time series radius of gyration for forecasting
+    timeseriesContainer['RMSD'] = rmsd.tolist()
+    # timseriesContainer['Hydration'] = watershell.tolist()
+
+
+    # timeseriesContainer['RMSFSeries'] = origRMSF.tolist()  ########## extacting average residue rmsf for each time point in each copy
+    
+
     timeseriesCopies.append(timeseriesContainer)
 
     #container['salt'] = nearest salt molecules 
@@ -198,7 +211,7 @@ def ScoreRg(histo,bins):
 def ScoreRMSF(rmsf):
   return np.mean(rmsf)
 
-def ScoreRMSFSeries(rmsf)
+def ScoreRMSFSeries(rmsf):
   return np.mean(rmsf, axis=1)
 
 
@@ -207,14 +220,14 @@ def ScoreRMSFSeries(rmsf)
 
 def doit(mode=None,case=None,nStruct=2):
   #print(case,mode)
-  if "traj3" in case:
-    caseToProcess = "../trajs3/system_reduced_protein.pdb"
+  if "trajs3" in case:
+    caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
     dataFile = "traj3.csv"
-    dataSeries = "traj3Series.csv"
-  elif 'traj7' in case:
-    caseToProcess = "../trajs7_ad/system_reduced_protein"
+    dataSeries = "traj3Series.json"
+  elif 'trajs7' in case:
+    caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
     dataFile = "traj7.csv"
-    dataSeries = "traj7Series.csv"
+    dataSeries = "traj7Series.json"
   else:
       raise RuntimeError("dunno this case") 
 
@@ -229,9 +242,11 @@ def doit(mode=None,case=None,nStruct=2):
     # saving series data
     copyData, seriesData = GetTrajData(traj,nStruct = nStruct)
     # df = pd.DataFrame.from_dict(copyData) 
-  
-    dfSeries = pd.DataFrame.from_dict(seriesData)
-    dfSeries.to_csv(dataSeries)
+    
+    with open(dataSeries, 'w') as file:
+        json.dump(seriesData, file)
+    # dfSeries = pd.DataFrame.from_dict(seriesData)
+    # dfSeries.to_csv(dataSeries)
     # should do pickle eventually) 
     # print("Printing to ",dataFile) 
     # df.to_csv(dataFile) 
