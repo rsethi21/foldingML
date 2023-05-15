@@ -4,7 +4,10 @@ import pandas as pd
 import matplotlib.pylab as plt
 import os
 import json
+<<<<<<< HEAD
 import pdb
+=======
+>>>>>>> c7086a3d5fe31ba2eefce8f52c1556f80e8c3972
 
 ##
 ## Inputs 
@@ -133,6 +136,7 @@ def GetTrajData(traj,nStruct = 2):
 
     timeseriesContainer = dict()
     timeseriesContainer['RgSeries'] = data.tolist() ############### extracting time series radius of gyration for forecasting
+<<<<<<< HEAD
     timeseriesContainer['RMSD'] = rmsd.tolist()
     # timseriesContainer['Hydration'] = watershell.tolist()
 
@@ -140,6 +144,9 @@ def GetTrajData(traj,nStruct = 2):
     # timeseriesContainer['RMSFSeries'] = origRMSF.tolist()  ########## extacting average residue rmsf for each time point in each copy
     
 
+=======
+    # timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(origRMSF) ########## extacting average residue rmsf for each time point in each copy
+>>>>>>> c7086a3d5fe31ba2eefce8f52c1556f80e8c3972
     timeseriesCopies.append(timeseriesContainer)
 
     #container['salt'] = nearest salt molecules 
@@ -243,14 +250,21 @@ def doit(mode=None,case=None,nStruct=2):
     copyData, seriesData = GetTrajData(traj,nStruct = nStruct)
     # df = pd.DataFrame.from_dict(copyData) 
     
+<<<<<<< HEAD
     with open(dataSeries, 'w') as file:
         json.dump(seriesData, file)
+=======
+>>>>>>> c7086a3d5fe31ba2eefce8f52c1556f80e8c3972
     # dfSeries = pd.DataFrame.from_dict(seriesData)
     # dfSeries.to_csv(dataSeries)
     # should do pickle eventually) 
     # print("Printing to ",dataFile) 
     # df.to_csv(dataFile) 
-  
+    with open(dataSeries, 'w') as file:
+        json.dump(seriesData, file)
+        
+
+
   elif mode is "postprocess":
     print("Postprocessing data from trajs") 
     inputFile = dataFile             
