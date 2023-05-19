@@ -69,12 +69,14 @@ def GetFasta(traj,protLen):
 
 
 def GetTrajData(traj,nStruct = 2):
+  pt._verbose()
+  print(traj)
   copies = []   
   timeseriesCopies = []          
   
   # Assumes all instances are the same 
   # get residue id's 
-  fasta = GetFasta(traj,protLen)
+  # fasta = GetFasta(traj,protLen)
 
 
 
@@ -88,7 +90,7 @@ def GetTrajData(traj,nStruct = 2):
     #print("%d"%(fin+1)) 
   
     # get atoms for structure
-    mask = "@%d-%d"%(start,fin) ############ are these for all residues??
+    # mask = "@%d-%d"%(start,fin) ############ are these for all residues??
     #fr_i = traj[0,mask]
 
     # superpose
@@ -124,7 +126,7 @@ def GetTrajData(traj,nStruct = 2):
 
     container = dict()
     container['copy'] = i      
-    container['fasta'] = fasta
+    # container['fasta'] = fasta
     container['binEdges'] = binEdges 
     container['RgHist']=daHisto # if you go back to storing arrays, need to use pickle
     container['RgStart']=data[0]
@@ -133,12 +135,10 @@ def GetTrajData(traj,nStruct = 2):
 
     timeseriesContainer = dict()
     timeseriesContainer['RgSeries'] = data.tolist() ############### extracting time series radius of gyration for forecasting
-<<<<<<< HEAD
-=======
 
->>>>>>> e80cc53315cf18b3c5ec36aa7b3393f39abaa518
     timeseriesContainer['RMSD'] = rmsd.tolist()
-    timseriesContainer['Hydration'] = watershell.tolist()
+    print(watershell.values)
+    timeseriesContainer['Hydration'] = watershell.values.tolist()
 
 
     # timeseriesContainer['RMSFSeries'] = origRMSF.tolist()  ########## extacting average residue rmsf for each time point in each copy
@@ -226,11 +226,11 @@ def ScoreRMSFSeries(rmsf):
 def doit(mode=None,case=None,nStruct=2):
   #print(case,mode)
   if "trajs3" in case:
-    caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
+    caseToProcess = os.path.join(case, "system_reduced_all.pdb")
     dataFile = "traj3.csv"
     dataSeries = "traj3Series.json"
   elif 'trajs7' in case:
-    caseToProcess = os.path.join(case, "system_reduced_protein.pdb")
+    caseToProcess = os.path.join(case, "system_reduced_all.pdb")
     dataFile = "traj7.csv"
     dataSeries = "traj7Series.json"
   else:
@@ -263,11 +263,11 @@ def doit(mode=None,case=None,nStruct=2):
   elif mode is "postprocess":
     print("Postprocessing data from trajs") 
     inputFile = dataFile             
-    dfa = pd.read_csv( inputFile )              
+    # dfa = pd.read_csv( inputFile )              
   
-    ScoreFasta(dfa)
+    # ScoreFasta(dfa)
     val = re.sub('traj',"",case)            
-    ScoreProtonation(dfa,pH=val)
+    # ScoreProtonation(dfa,pH=val)
   
     out = dataFile.replace('.csv',"_scored.csv") 
     dfa.to_csv(out)                              
