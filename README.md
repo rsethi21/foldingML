@@ -6,6 +6,9 @@ Original trajectory data are available in
 ## Timeseries Forecasting
 Currently will output time series RMSF and Rg but may explore other protein chemistry output from pytraj; first use this as test
 
+Use pmap to multithread analyses
+https://amber-md.github.io/pytraj/latest/_api/pytraj.parallel.html
+
 Could not pip install pytraj, needed to build locally; follow their instructions
 
 ### LSTM

@@ -110,7 +110,7 @@ def GetTrajData(traj,nStruct = 2):
     ################ mol surface??
   
     ## compute radgyr
-    data = pt.radgyr( traj, mask=mask)
+    data = pt.radgyr(traj, mask=mask)
     #plt.plot(data)
     #daHisto,binEdges = np.histogram(data, bins=10,range=[10,20],density=True)
     daHisto,binEdges = np.histogram(data, bins=10,density=True)
@@ -122,7 +122,7 @@ def GetTrajData(traj,nStruct = 2):
     rmsfHist =ScoreRMSF(rmsf)         
 
     rmsd = pt.rmsd(traj, mask=mask)
-    watershell = pt.watershell(traj, mask, solvent_mask=':W')
+    watershell = pt.watershell(traj, solute_mask=mask, solvent_mask=':W')
 
     container = dict()
     container['copy'] = i      
@@ -135,9 +135,7 @@ def GetTrajData(traj,nStruct = 2):
 
     timeseriesContainer = dict()
     timeseriesContainer['RgSeries'] = data.tolist() ############### extracting time series radius of gyration for forecasting
-
     timeseriesContainer['RMSD'] = rmsd.tolist()
-    print(watershell.values)
     timeseriesContainer['Hydration'] = watershell.values.tolist()
 
 
@@ -172,7 +170,6 @@ def ScoreFasta(df):
   nscores = tally(vals,aa="D")
   nscores+= tally(vals,aa="E")
   df['negativeFasta']=nscores
-
   pscores = tally(vals,aa="K")
   pscores+= tally(vals,aa="R")
   df['positiveFasta']=pscores
@@ -230,7 +227,7 @@ def doit(mode=None,case=None,nStruct=2):
     dataFile = "traj3.csv"
     dataSeries = "traj3Series.json"
   elif 'trajs7' in case:
-    caseToProcess = os.path.join(case, "system_reduced_all.pdb")
+    caseToProcess = os.path.join(case, "system_reduced_all_MDtraj.pdb")
     dataFile = "traj7.csv"
     dataSeries = "traj7Series.json"
   else:
