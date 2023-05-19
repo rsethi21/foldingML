@@ -120,7 +120,7 @@ def GetTrajData(traj,nStruct = 2):
     rmsfHist =ScoreRMSF(rmsf)         
 
     rmsd = pt.rmsd(traj, mask=mask)
-    # watershell = pt.watershell(traj, mask)
+    watershell = pt.watershell(traj, mask, solvent_mask=':W')
 
     container = dict()
     container['copy'] = i      
@@ -133,8 +133,12 @@ def GetTrajData(traj,nStruct = 2):
 
     timeseriesContainer = dict()
     timeseriesContainer['RgSeries'] = data.tolist() ############### extracting time series radius of gyration for forecasting
+<<<<<<< HEAD
+=======
+
+>>>>>>> e80cc53315cf18b3c5ec36aa7b3393f39abaa518
     timeseriesContainer['RMSD'] = rmsd.tolist()
-    # timseriesContainer['Hydration'] = watershell.tolist()
+    timseriesContainer['Hydration'] = watershell.tolist()
 
 
     # timeseriesContainer['RMSFSeries'] = origRMSF.tolist()  ########## extacting average residue rmsf for each time point in each copy
