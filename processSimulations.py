@@ -5,38 +5,33 @@ import matplotlib.pylab as plt
 import os
 import json
 import pdb
+import re
+import sys
 
-##
-## Inputs 
-##
+## specific to the protein
 
 protLen=202
-# firstAtom = "BB  MET B   1"
-mask = ":MET@BB" # i can't get resid 1 to work correctly, so this is a workaround
+mask = ":MET@BB" ## i can't get resid 1 to work correctly, so this is a workaround
 nStruct=200
 
-
-##
-## Functions 
-##
-
-# find number of structures
 d = {'CYS': 'C', 'ASP': 'D', 'SER': 'S', 'GLN': 'Q', 'LYS': 'K',
      'ILE': 'I', 'PRO': 'P', 'THR': 'T', 'PHE': 'F', 'ASN': 'N',
      'GLY': 'G', 'HIS': 'H', 'LEU': 'L', 'ARG': 'R', 'TRP': 'W',
      'ALA': 'A', 'VAL':'V', 'GLU': 'E', 'TYR': 'Y', 'MET': 'M'}
 
 def LoadTraj(caseToProcess):
-  # load 
+  
+  ## load 
+  
   if "pdb" not in caseToProcess:
     trajName = caseToProcess+".xtc"
     protName = caseToProcess+".pdb"
-    # xtc file needs associated pdb 
     traj = pt.iterload(trajName,protName)             
   else: 
     traj = pt.iterload(caseToProcess)                 
 
-  # get structure info 
+  ## get structure info 
+  
   fr_i = traj[0,mask]
   l = pt.get_coordinates(fr_i); 
   nStruct = np.shape(l)[1]
@@ -44,184 +39,52 @@ def LoadTraj(caseToProcess):
 
   return nStruct,traj
 
-
-def GetFasta(traj,protLen):
-    top = traj.top
-    print(traj.top)
-    # store all residue/indices
-    daList=[]
-    for residue in top.residues:
-      #daList.append(residue)
-      daList.append("%d.%s"%(residue.index,residue.name))
-
-    # keep unique (this should 1. keep just one 'tag' for all atoms in a residue and 2. only keep the first protein copy, since all others are identical)
-    unique = set( daList ) 
-
-    #print(sorted(unique) )
-    l = [ x.split(".")[1] for x in sorted(unique) ]
-    fasta = [ d[x] for x in l ]
-    fasta = "".join(fasta)
-
-    return fasta
-
-
-
-
-
 def GetTrajData(traj,nStruct = 2):
-  pt._verbose()
+  
+  ## prints out summary of the trajectory from the simulation
   print(traj)
+
+  pt._verbose()
   copies = []   
   timeseriesCopies = []          
   
-  # Assumes all instances are the same 
-  # get residue id's 
-  # fasta = GetFasta(traj,protLen)
-
-
-
-  # get per-structure rmsf
+  ## goes through each copy of the trajectory sequentially for a maximum of 200 according to documentation
   for i in range(nStruct): 
-    print(i)
-    # define range 
     start=(i*protLen)+1; fin = start+protLen-1
-    #mask = "@%d-%d"%(start,fin)
-    #fr_i = traj[0,mask]
-    #print("%d"%(fin+1)) 
+    mask = "@%d-%d"%(start,fin)
   
-    # get atoms for structure
-    # mask = "@%d-%d"%(start,fin) ############ are these for all residues??
-    #fr_i = traj[0,mask]
-
-    # superpose
+    ## superpose
     pt.superpose(traj,mask=mask)
-    rmsf = pt.rmsf(traj,mask=mask) 
-    # values only, not residues
-    np.shape(rmsf)
-    origRMSF = rmsf
-    rmsf = rmsf[:,1] # index is residue number and column is values at each residue for the 200 frames
-  
-    # pt.surf
-    # atomiccorr (end to end distance/correlation? ) 
-    # ytraj.dihedral_??? miught not work 
-    # density? 
-    # pca
-    # pytraj.watershell
-    ################ mol surface??
-  
-    ## compute radgyr
-    data = pt.radgyr(traj, mask=mask)
-    #plt.plot(data)
-    #daHisto,binEdges = np.histogram(data, bins=10,range=[10,20],density=True)
-    daHisto,binEdges = np.histogram(data, bins=10,density=True)
-    #plt.plot(binEdges,daHisto,label=i)
-    #print(binEdges) 
-    #plt.plot(binEdges[0:10],daHisto,label=i)
 
-    daHisto=ScoreRg(daHisto,binEdges)
-    rmsfHist =ScoreRMSF(rmsf)         
+    ## ideas
+    ################ pytraj.dihedral_??? miught not work 
+    ################ density? 
+    ################ pca
+    ################ mol surface??
+    ################ what if change this to extract watershell for sodium ions?
+
+    ## compute radgyr
+    
+    data = pt.radgyr(traj, mask=mask)
+
+    ## compute rmsd to ref first frame
 
     rmsd = pt.rmsd(traj, mask=mask)
+    
+    ## compute number of watermolecules in solvation layers
+
     watershell = pt.watershell(traj, solute_mask=mask, solvent_mask=':W')
 
-    container = dict()
-    container['copy'] = i      
-    # container['fasta'] = fasta
-    container['binEdges'] = binEdges 
-    container['RgHist']=daHisto # if you go back to storing arrays, need to use pickle
-    container['RgStart']=data[0]
-    container['RgEnd']=data[-1]
-    container['RMSFHist']=rmsfHist
-
     timeseriesContainer = dict()
-    timeseriesContainer['RgSeries'] = data.tolist() ############### extracting time series radius of gyration for forecasting
+    timeseriesContainer['RgSeries'] = data.tolist()
     timeseriesContainer['RMSD'] = rmsd.tolist()
     timeseriesContainer['Hydration'] = watershell.values.tolist()
-
-
-    # timeseriesContainer['RMSFSeries'] = origRMSF.tolist()  ########## extacting average residue rmsf for each time point in each copy
-    
-
-    # timeseriesContainer['RMSFSeries'] = ScoreRMSFSeries(origRMSF) ########## extacting average residue rmsf for each time point in each copy
     timeseriesCopies.append(timeseriesContainer)
-
-    #container['salt'] = nearest salt molecules 
-    copies.append(container) 
-
-    #plt.plot(rmsf,label=i)
   
-  #plt.legend(loc=0)
-  #plt.gcf().savefig("test.png") 
-  return copies, timeseriesCopies         
-
-def ScoreFasta(df):
-  """
-  Computes the number of negatively charged a.a. (irrespective of protonation) 
-  """
-  feature = "fasta"
-  #nEle = len( df.index ) 
-  vals = df[feature]
-  nRes = int(len(vals[0]))
-
-  def tally(vals,aa="E"):
-    scores = [ x.count(aa) for x in vals ]
-    scores = np.sum(scores)/nRes
-    return scores
-  nscores = tally(vals,aa="D")
-  nscores+= tally(vals,aa="E")
-  df['negativeFasta']=nscores
-  pscores = tally(vals,aa="K")
-  pscores+= tally(vals,aa="R")
-  df['positiveFasta']=pscores
-
-def ScoreProtonation(df,pH=None):
-  '''
-  Protonation state as determined by protonation.ipynb
-  HARD CODED
-  '''
-  pH = int(pH)
-  if pH == 3:
-      rhoN = -0.052513823529411766 
-      rhoP = 0.6387256176470587
-  elif pH==7:
-      rhoN = -0.621903448275862 
-      rhoP = 6.89655172413793e-08
-  else:
-      raise RuntimeError("pH not understood")
-
-  df['negativepH']=rhoN         
-  df['positivepH']=rhoP         
-  
-
-
-
-import re 
-def stringArToAr(stringAr):
-  val = re.sub('\[\s*',"",stringAr)
-  val = re.sub('\s*\]',"",val)
-  val = re.sub('\n',"",val)
-  #print(val)
-  x = val.split()         
-  x = np.asarray(x,dtype='float')
-  return x 
-
-def ScoreRg(histo,bins):
-  idx = np.argmax(histo) 
-  probRg = bins[idx]
-  return probRg
-
-def ScoreRMSF(rmsf):
-  return np.mean(rmsf)
-
-def ScoreRMSFSeries(rmsf):
-  return np.mean(rmsf, axis=1)
-
-
-# get all data 
-#nStruct = 10 # 
+  return timeseriesCopies
 
 def doit(mode=None,case=None,nStruct=2):
-  #print(case,mode)
+
   if "trajs3" in case:
     caseToProcess = os.path.join(case, "system_reduced_all.pdb")
     dataFile = "traj3.csv"
@@ -233,7 +96,7 @@ def doit(mode=None,case=None,nStruct=2):
   else:
       raise RuntimeError("dunno this case") 
 
-# inputs 
+  ## inputs 
 
   if mode is "generation":
     print("Generating data from trajs") 
@@ -241,30 +104,21 @@ def doit(mode=None,case=None,nStruct=2):
     nStruct = np.min([nStruct,nStructPossible])
     print("Processing %d"%nStruct)
 
-    # saving series data
-    copyData, seriesData = GetTrajData(traj,nStruct = nStruct)
-    # df = pd.DataFrame.from_dict(copyData) 
+    ## saving series data
+    
+    seriesData = GetTrajData(traj,nStruct = nStruct)
     
     with open(dataSeries, 'w') as file:
         json.dump(seriesData, file)
-    # dfSeries = pd.DataFrame.from_dict(seriesData)
-    # dfSeries.to_csv(dataSeries)
-    # should do pickle eventually) 
-    # print("Printing to ",dataFile) 
-    # df.to_csv(dataFile) 
+    
     with open(dataSeries, 'w') as file:
         json.dump(seriesData, file)
-        
-
 
   elif mode is "postprocess":
     print("Postprocessing data from trajs") 
     inputFile = dataFile             
-    # dfa = pd.read_csv( inputFile )              
   
-    # ScoreFasta(dfa)
     val = re.sub('traj',"",case)            
-    # ScoreProtonation(dfa,pH=val)
   
     out = dataFile.replace('.csv',"_scored.csv") 
     dfa.to_csv(out)                              
@@ -272,22 +126,6 @@ def doit(mode=None,case=None,nStruct=2):
     raise RuntimeError("mode not understood") 
   
 
-
-
-
-  
-#!/usr/bin/env python
-import sys
-##################################
-#
-# Revisions
-#       10.08.10 inception
-#
-##################################
-
-#
-# Message printed when program run without arguments 
-#
 def helpmsg():
   scriptName= sys.argv[0]
   msg="""
@@ -297,19 +135,17 @@ Usage:
 """
   msg+="  %s -validation" % (scriptName)
   msg+="""
-  
- 
+
 Notes:
 
 """
   return msg
 
-#
-# MAIN routine executed when launching this script from command line 
-#
+
+## main code running script when run from commandline
+
 mode="generation"
 if __name__ == "__main__":
-  import sys
   msg = helpmsg()
   remap = "none"
 
@@ -331,11 +167,6 @@ if __name__ == "__main__":
       doit(mode=mode,case=arg1,nStruct=nStruct)
       quit()
   
-
-
-
-
-
   raise RuntimeError("Arguments not understood")
 
 
