@@ -5,6 +5,7 @@ import re
 import sys
 import time
 from itertools import repeat
+
 import numpy as np
 import pytraj as pt
 
