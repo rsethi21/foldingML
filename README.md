@@ -13,6 +13,8 @@ pH 3 has 722 frames, pH 7 has 682 frames
 
 Multiprocessed by number of structures, approximate runtime was about 17 for 1 structure copy, 21 for 4 structure copies, and 45 for 15 structure copies
 
+Workflow pylint
+
 ## Read this notebook first 
 prelim.ipynb - very basic notebook for loading two simulation cases (trajs3 and trajs7) that correspond to an ensemble of proteins simulated at different pHs. Once the files are loaded as pandas dataframes, they are run through a decision-tree classification algorithm. Further details are provided inside the ipynb document. 
 
