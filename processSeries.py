@@ -76,13 +76,6 @@ def GetTrajData(traj, nStruct):
     ## superpose
     pt.superpose(traj, mask=mask)
 
-    ## ideas
-    ################ pytraj.dihedral_??? miught not work
-    ################ density?
-    ################ pca
-    ################ mol surface??
-    ################ what if change this to extract watershell for sodium ions?
-
     ## compute radgyr
 
     data = pt.radgyr(traj, mask=mask)
