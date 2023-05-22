@@ -3,3 +3,6 @@ pandas
 matplotlib
 pytraj
 cython
+black
+isort
+autoflake
