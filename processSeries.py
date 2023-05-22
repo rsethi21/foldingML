@@ -64,13 +64,17 @@ def GetTrajData(traj,nStruct = 2):
     ################ what if change this to extract watershell for sodium ions?
 
     ## compute radgyr
-    
+
     data = pt.radgyr(traj, mask=mask)
 
     ## compute rmsd to ref first frame
 
     rmsd = pt.rmsd(traj, mask=mask)
-    
+
+    ## compute number of sodium ions in solvation layers
+
+    sodiumshell = pt.watershell(traj, solute_mask=mask, solvent_mask=':ION')
+
     ## compute number of watermolecules in solvation layers
 
     watershell = pt.watershell(traj, solute_mask=mask, solvent_mask=':W')
@@ -78,6 +82,7 @@ def GetTrajData(traj,nStruct = 2):
     timeseriesContainer = dict()
     timeseriesContainer['RgSeries'] = data.tolist()
     timeseriesContainer['RMSD'] = rmsd.tolist()
+    timeseriesContainer['Salt'] = sodiumshell.values.tolist()
     timeseriesContainer['Hydration'] = watershell.values.tolist()
     timeseriesCopies.append(timeseriesContainer)
   

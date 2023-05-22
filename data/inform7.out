@@ -5,9 +5,9 @@ pytraj.TrajectoryIterator, 682 frames:
 Size: 5.408928 (GB)
 <Topology: 354826 atoms, 343726 residues, 354826 mols, PBC with box type = cubic>
            
-processSimulations.py:99: SyntaxWarning: "is" with a literal. Did you mean "=="?
+processSeries.py:104: SyntaxWarning: "is" with a literal. Did you mean "=="?
   if mode is "generation":
-processSimulations.py:115: SyntaxWarning: "is" with a literal. Did you mean "=="?
+processSeries.py:120: SyntaxWarning: "is" with a literal. Did you mean "=="?
   elif mode is "postprocess":
 	Setting active reference for distance-based masks: 'D00000'
     ALIGN: Aligning atoms selected by mask '@1-202'
@@ -24,6 +24,17 @@ ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
 	Target mask: [@1-202](202)
 	Reference topology: system_reduced_all_MDtraj.pdb
 	Reference mask: [@1-202](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1-202]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1-202] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is on.
     WATERSHELL:
 	The first shell will contain solvent < 3.400 angstroms from
 	  the solute; the second shell < 5.000 angstroms...
@@ -49,6 +60,17 @@ ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
 	Target mask: [@203-404](202)
 	Reference topology: system_reduced_all_MDtraj.pdb
 	Reference mask: [@203-404](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@203-404]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@203-404] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is on.
     WATERSHELL:
 	The first shell will contain solvent < 3.400 angstroms from
 	  the solute; the second shell < 5.000 angstroms...
