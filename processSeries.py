@@ -51,7 +51,7 @@ def GetTrajData(traj,nStruct = 2):
   ## goes through each copy of the trajectory sequentially for a maximum of 200 according to documentation
   for i in range(nStruct): 
     start=(i*protLen)+1; fin = start+protLen-1
-    mask = "@%d-%d"%(start,fin)
+    mask = "@%d-%d"%(start,fin) ############ find out what the d's mean
   
     ## superpose
     pt.superpose(traj,mask=mask)
@@ -87,12 +87,10 @@ def doit(mode=None,case=None,nStruct=2):
 
   if "trajs3" in case:
     caseToProcess = os.path.join(case, "system_reduced_all.pdb")
-    dataFile = "traj3.csv"
-    dataSeries = "traj3Series.json"
+    dataSeries = "./data/traj3Series.json"
   elif 'trajs7' in case:
     caseToProcess = os.path.join(case, "system_reduced_all_MDtraj.pdb")
-    dataFile = "traj7.csv"
-    dataSeries = "traj7Series.json"
+    dataSeries = "./data/traj7Series.json"
   else:
       raise RuntimeError("dunno this case") 
 

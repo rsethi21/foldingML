@@ -5,68 +5,58 @@ pytraj.TrajectoryIterator, 682 frames:
 Size: 5.408928 (GB)
 <Topology: 354826 atoms, 343726 residues, 354826 mols, PBC with box type = cubic>
            
-0
-processSimulations.py:238: SyntaxWarning: "is" with a literal. Did you mean "=="?
+processSimulations.py:99: SyntaxWarning: "is" with a literal. Did you mean "=="?
   if mode is "generation":
-processSimulations.py:260: SyntaxWarning: "is" with a literal. Did you mean "=="?
+processSimulations.py:115: SyntaxWarning: "is" with a literal. Did you mean "=="?
   elif mode is "postprocess":
 	Setting active reference for distance-based masks: 'D00000'
-    ALIGN: Aligning atoms selected by mask ':MET@BB'
-	Reference is "D00000" (:MET@BB)
-    ATOMICFLUCT: calculating atomic positional fluctuations for atoms.
-	Atom mask: [:MET@BB]
-	Start: 1  Stop: Final frame
-	Mask [:MET@BB] corresponds to 200 atoms.
-    RADGYR: Calculating for atoms in mask :MET@BB.
+    ALIGN: Aligning atoms selected by mask '@1-202'
+	Reference is "D00000" (@1-202)
+    RADGYR: Calculating for atoms in mask @1-202.
 	RoG max will not be stored.
-	:MET@BB (200 atoms).
+	@1-202 (202 atoms).
 	Setting active reference for distance-based masks: 'myref'
-    RMSD: (:MET@BB), reference is "myref" (:MET@BB).
+    RMSD: (@1-202), reference is "myref" (@1-202).
 	Best-fit RMSD will be calculated, coords will be rotated and translated.
 .....................................................
 ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
-  0: [:MET@BB  ref myref   ]
-	Target mask: [:MET@BB](200)
+  0: [@1-202  ref myref   ]
+	Target mask: [@1-202](202)
 	Reference topology: system_reduced_all_MDtraj.pdb
-	Reference mask: [:MET@BB](200)
+	Reference mask: [@1-202](202)
     WATERSHELL:
 	The first shell will contain solvent < 3.400 angstroms from
 	  the solute; the second shell < 5.000 angstroms...
-	Solute atoms will be specified by [:MET@BB]
+	Solute atoms will be specified by [@1-202]
 	Solvent atoms will be specified by [:W]
 	Parallelizing calculation with 32 threads.
 	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
 	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
-	Mask [:MET@BB] corresponds to 200 atoms.
+	Mask [@1-202] corresponds to 202 atoms.
 	Mask [:W] corresponds to 332826 atoms.
 	Imaging is on.
-1
-    ALIGN: Aligning atoms selected by mask ':MET@BB'
-	Reference is "D00001" (:MET@BB)
-    ATOMICFLUCT: calculating atomic positional fluctuations for atoms.
-	Atom mask: [:MET@BB]
-	Start: 1  Stop: Final frame
-	Mask [:MET@BB] corresponds to 200 atoms.
-    RADGYR: Calculating for atoms in mask :MET@BB.
+    ALIGN: Aligning atoms selected by mask '@203-404'
+	Reference is "D00001" (@203-404)
+    RADGYR: Calculating for atoms in mask @203-404.
 	RoG max will not be stored.
-	:MET@BB (200 atoms).
+	@203-404 (202 atoms).
 	Setting active reference for distance-based masks: 'myref'
-    RMSD: (:MET@BB), reference is "myref" (:MET@BB).
+    RMSD: (@203-404), reference is "myref" (@203-404).
 	Best-fit RMSD will be calculated, coords will be rotated and translated.
 .....................................................
 ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
-  0: [:MET@BB  ref myref   ]
-	Target mask: [:MET@BB](200)
+  0: [@203-404  ref myref   ]
+	Target mask: [@203-404](202)
 	Reference topology: system_reduced_all_MDtraj.pdb
-	Reference mask: [:MET@BB](200)
+	Reference mask: [@203-404](202)
     WATERSHELL:
 	The first shell will contain solvent < 3.400 angstroms from
 	  the solute; the second shell < 5.000 angstroms...
-	Solute atoms will be specified by [:MET@BB]
+	Solute atoms will be specified by [@203-404]
 	Solvent atoms will be specified by [:W]
 	Parallelizing calculation with 32 threads.
 	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
 	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
-	Mask [:MET@BB] corresponds to 200 atoms.
+	Mask [@203-404] corresponds to 202 atoms.
 	Mask [:W] corresponds to 332826 atoms.
 	Imaging is on.
