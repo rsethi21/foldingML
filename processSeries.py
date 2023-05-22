@@ -7,6 +7,9 @@ import json
 import pdb
 import re
 import sys
+import concurrent.futures
+import time
+from itertools import repeat
 
 ## specific to the protein
 
@@ -39,7 +42,7 @@ def LoadTraj(caseToProcess):
 
   return nStruct,traj
 
-def GetTrajData(traj,nStruct = 2):
+def GetTrajData(traj,nStruct):
   
   ## prints out summary of the trajectory from the simulation
   print(traj)
@@ -49,12 +52,12 @@ def GetTrajData(traj,nStruct = 2):
   timeseriesCopies = []          
   
   ## goes through each copy of the trajectory sequentially for a maximum of 200 according to documentation
-  for i in range(nStruct): 
-    start=(i*protLen)+1; fin = start+protLen-1
-    mask = "@%d-%d"%(start,fin) ############ find out what the d's mean
+  # for i in range(nStruct): 
+  start=(nStruct*protLen)+1; fin = start+protLen-1
+  mask = "@%d-%d"%(start,fin) ############ find out what the d's mean
   
     ## superpose
-    pt.superpose(traj,mask=mask)
+  pt.superpose(traj,mask=mask)
 
     ## ideas
     ################ pytraj.dihedral_??? miught not work 
@@ -65,30 +68,29 @@ def GetTrajData(traj,nStruct = 2):
 
     ## compute radgyr
 
-    data = pt.radgyr(traj, mask=mask)
+  data = pt.radgyr(traj, mask=mask)
 
     ## compute rmsd to ref first frame
 
-    rmsd = pt.rmsd(traj, mask=mask)
+  rmsd = pt.rmsd(traj, mask=mask)
 
     ## compute number of sodium ions in solvation layers
 
-    sodiumshell = pt.watershell(traj, solute_mask=mask, solvent_mask=':ION')
+  sodiumshell = pt.watershell(traj, solute_mask=mask, solvent_mask=':ION')
 
     ## compute number of watermolecules in solvation layers
 
-    watershell = pt.watershell(traj, solute_mask=mask, solvent_mask=':W')
+  watershell = pt.watershell(traj, solute_mask=mask, solvent_mask=':W')
 
-    timeseriesContainer = dict()
-    timeseriesContainer['RgSeries'] = data.tolist()
-    timeseriesContainer['RMSD'] = rmsd.tolist()
-    timeseriesContainer['Salt'] = sodiumshell.values.tolist()
-    timeseriesContainer['Hydration'] = watershell.values.tolist()
-    timeseriesCopies.append(timeseriesContainer)
+  timeseriesContainer = dict()
+  timeseriesContainer['RgSeries'] = data.tolist()
+  timeseriesContainer['RMSD'] = rmsd.tolist()
+  timeseriesContainer['Salt'] = sodiumshell.values.tolist()
+  timeseriesContainer['Hydration'] = watershell.values.tolist()
   
-  return timeseriesCopies
+  return timeseriesContainer
 
-def doit(mode=None,case=None,nStruct=2):
+def doit(nStruct,mode=None,case=None):
 
   if "trajs3" in case:
     caseToProcess = os.path.join(case, "system_reduced_all.pdb")
@@ -109,8 +111,12 @@ def doit(mode=None,case=None,nStruct=2):
 
     ## saving series data
     
-    seriesData = GetTrajData(traj,nStruct = nStruct)
+    with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
+        indices = [i for i in range(1, nStruct+1)]
+        results = executor.map(GetTrajData, repeat(traj), indices)
     
+    seriesData = [result for result in results]
+
     with open(dataSeries, 'w') as file:
         json.dump(seriesData, file)
     
@@ -166,8 +172,11 @@ if __name__ == "__main__":
     if(arg=="-nstruct"):             
       nStruct=int(sys.argv[i+1]) 
     if(arg=="-case"):
-      arg1=sys.argv[i+1] 
-      doit(mode=mode,case=arg1,nStruct=nStruct)
+      arg1=sys.argv[i+1]
+      start = time.perf_counter()
+      doit(nStruct,mode=mode,case=arg1)
+      end = time.perf_counter()
+      print(f'Time to run = {end-start}')
       quit()
   
   raise RuntimeError("Arguments not understood")
