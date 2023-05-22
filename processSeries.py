@@ -52,7 +52,7 @@ def GetTrajData(traj,nStruct):
   timeseriesCopies = []          
   
   ## goes through each copy of the trajectory sequentially for a maximum of 200 according to documentation
-  # for i in range(nStruct): 
+  
   start=(nStruct*protLen)+1; fin = start+protLen-1
   mask = "@%d-%d"%(start,fin) ############ find out what the d's mean
   
