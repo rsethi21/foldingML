@@ -111,7 +111,7 @@ def doit(nStruct,mode=None,case=None):
 
     ## saving series data
     
-    with concurrent.futures.ProcessPoolExecutor(max_workers=8) as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=15) as executor:
         indices = [i for i in range(1, nStruct+1)]
         results = executor.map(GetTrajData, repeat(traj), indices)
     

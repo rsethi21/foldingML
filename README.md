@@ -4,16 +4,14 @@ Original trajectory data are available in
  (from Bin Sun)
 
 ## Timeseries Forecasting
-Currently will output time series RMSF and Rg but may explore other protein chemistry output from pytraj; first use this as test
-
-Use pmap to multithread analyses
-https://amber-md.github.io/pytraj/latest/_api/pytraj.parallel.html
+Currently will output time series Radgyr, RMSD, WaterShell, IonShell from pytraj
 
 Could not pip install pytraj, needed to build locally; follow their instructions
 
-### LSTM
-Multi-variate, multi-output, multi-step, multi-dataset LSTM training on traj3, 7 with 5 copies each
+Multi-variate, multi-output, multi-step, multi-dataset LSTM training on traj3, 7 with 15 copies each
+pH 3 has 722 frames, pH 7 has 682 frames
 
+Multiprocessed by number of structures, approximate runtime was about 17 for 1 structure copy, 21 for 4 structure copies, and 45 for 15 structure copies
 
 ## Read this notebook first 
 prelim.ipynb - very basic notebook for loading two simulation cases (trajs3 and trajs7) that correspond to an ensemble of proteins simulated at different pHs. Once the files are loaded as pandas dataframes, they are run through a decision-tree classification algorithm. Further details are provided inside the ipynb document. 

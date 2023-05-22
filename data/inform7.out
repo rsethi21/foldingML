@@ -1,56 +1,280 @@
 Generating data from trajs
 Finding 200 structures
-Processing 2
+Processing 15
+processSeries.py:106: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if mode is "generation":
+processSeries.py:126: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif mode is "postprocess":
 pytraj.TrajectoryIterator, 682 frames: 
 Size: 5.408928 (GB)
-<Topology: 354826 atoms, 343726 residues, 354826 mols, PBC with box type = cubic>
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
            
-processSeries.py:104: SyntaxWarning: "is" with a literal. Did you mean "=="?
-  if mode is "generation":
-processSeries.py:120: SyntaxWarning: "is" with a literal. Did you mean "=="?
-  elif mode is "postprocess":
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
 	Setting active reference for distance-based masks: 'D00000'
-    ALIGN: Aligning atoms selected by mask '@1-202'
-	Reference is "D00000" (@1-202)
-    RADGYR: Calculating for atoms in mask @1-202.
+    ALIGN: Aligning atoms selected by mask '@1617-1818'
+	Reference is "D00000" (@1617-1818)
+    RADGYR: Calculating for atoms in mask @1617-1818.
 	RoG max will not be stored.
-	@1-202 (202 atoms).
+	@1617-1818 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@2627-2828'
+	Reference is "D00000" (@2627-2828)
+    RADGYR: Calculating for atoms in mask @2627-2828.
+	RoG max will not be stored.
+	@2627-2828 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@1011-1212'
+	Reference is "D00000" (@1011-1212)
+    RADGYR: Calculating for atoms in mask @1011-1212.
+	RoG max will not be stored.
+	@1011-1212 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@3031-3232'
+	Reference is "D00000" (@3031-3232)
+    RADGYR: Calculating for atoms in mask @3031-3232.
+	RoG max will not be stored.
+	@3031-3232 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@2223-2424'
+	Reference is "D00000" (@2223-2424)
+    RADGYR: Calculating for atoms in mask @2223-2424.
+	RoG max will not be stored.
+	@2223-2424 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@2021-2222'
+	Reference is "D00000" (@2021-2222)
+    RADGYR: Calculating for atoms in mask @2021-2222.
+	RoG max will not be stored.
+	@2021-2222 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@1819-2020'
+	Reference is "D00000" (@1819-2020)
+    RADGYR: Calculating for atoms in mask @1819-2020.
+	RoG max will not be stored.
+	@1819-2020 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@203-404'
+	Reference is "D00000" (@203-404)
+    RADGYR: Calculating for atoms in mask @203-404.
+	RoG max will not be stored.
+	@203-404 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@607-808'
+	Reference is "D00000" (@607-808)
+    RADGYR: Calculating for atoms in mask @607-808.
+	RoG max will not be stored.
+	@607-808 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@405-606'
+	Reference is "D00000" (@405-606)
+    RADGYR: Calculating for atoms in mask @405-606.
+	RoG max will not be stored.
+	@405-606 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@2829-3030'
+	Reference is "D00000" (@2829-3030)
+    RADGYR: Calculating for atoms in mask @2829-3030.
+	RoG max will not be stored.
+	@2829-3030 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@1415-1616'
+	Reference is "D00000" (@1415-1616)
+    RADGYR: Calculating for atoms in mask @1415-1616.
+	RoG max will not be stored.
+	@1415-1616 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@1213-1414'
+	Reference is "D00000" (@1213-1414)
+    RADGYR: Calculating for atoms in mask @1213-1414.
+	RoG max will not be stored.
+	@1213-1414 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@2425-2626'
+	Reference is "D00000" (@2425-2626)
+    RADGYR: Calculating for atoms in mask @2425-2626.
+	RoG max will not be stored.
+	@2425-2626 (202 atoms).
+	Setting active reference for distance-based masks: 'D00000'
+    ALIGN: Aligning atoms selected by mask '@809-1010'
+	Reference is "D00000" (@809-1010)
+    RADGYR: Calculating for atoms in mask @809-1010.
+	RoG max will not be stored.
+	@809-1010 (202 atoms).
 	Setting active reference for distance-based masks: 'myref'
-    RMSD: (@1-202), reference is "myref" (@1-202).
+    RMSD: (@2021-2222), reference is "myref" (@2021-2222).
 	Best-fit RMSD will be calculated, coords will be rotated and translated.
 .....................................................
 ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
-  0: [@1-202  ref myref   ]
-	Target mask: [@1-202](202)
+  0: [@2021-2222  ref myref   ]
+	Target mask: [@2021-2222](202)
 	Reference topology: system_reduced_all_MDtraj.pdb
-	Reference mask: [@1-202](202)
+	Reference mask: [@2021-2222](202)
     WATERSHELL:
 	The first shell will contain solvent < 3.400 angstroms from
 	  the solute; the second shell < 5.000 angstroms...
-	Solute atoms will be specified by [@1-202]
+	Solute atoms will be specified by [@2021-2222]
 	Solvent atoms will be specified by [:ION]
 	Parallelizing calculation with 32 threads.
 	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
 	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
-	Mask [@1-202] corresponds to 202 atoms.
+	Mask [@2021-2222] corresponds to 202 atoms.
 	Mask [:ION] corresponds to 1800 atoms.
-	Imaging is on.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@2425-2626), reference is "myref" (@2425-2626).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@2425-2626  ref myref   ]
+	Target mask: [@2425-2626](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@2425-2626](202)
     WATERSHELL:
 	The first shell will contain solvent < 3.400 angstroms from
 	  the solute; the second shell < 5.000 angstroms...
-	Solute atoms will be specified by [@1-202]
-	Solvent atoms will be specified by [:W]
+	Solute atoms will be specified by [@2425-2626]
+	Solvent atoms will be specified by [:ION]
 	Parallelizing calculation with 32 threads.
 	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
 	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
-	Mask [@1-202] corresponds to 202 atoms.
-	Mask [:W] corresponds to 332826 atoms.
-	Imaging is on.
-    ALIGN: Aligning atoms selected by mask '@203-404'
-	Reference is "D00001" (@203-404)
-    RADGYR: Calculating for atoms in mask @203-404.
-	RoG max will not be stored.
-	@203-404 (202 atoms).
+	Mask [@2425-2626] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@809-1010), reference is "myref" (@809-1010).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@809-1010  ref myref   ]
+	Target mask: [@809-1010](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@809-1010](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@809-1010]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@809-1010] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@1213-1414), reference is "myref" (@1213-1414).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@1213-1414  ref myref   ]
+	Target mask: [@1213-1414](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@1213-1414](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1213-1414]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1213-1414] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@405-606), reference is "myref" (@405-606).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@405-606  ref myref   ]
+	Target mask: [@405-606](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@405-606](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@405-606]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@405-606] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@607-808), reference is "myref" (@607-808).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@607-808  ref myref   ]
+	Target mask: [@607-808](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@607-808](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@607-808]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@607-808] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
 	Setting active reference for distance-based masks: 'myref'
     RMSD: (@203-404), reference is "myref" (@203-404).
 	Best-fit RMSD will be calculated, coords will be rotated and translated.
@@ -70,7 +294,288 @@ ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
 	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
 	Mask [@203-404] corresponds to 202 atoms.
 	Mask [:ION] corresponds to 1800 atoms.
-	Imaging is on.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@2223-2424), reference is "myref" (@2223-2424).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@2223-2424  ref myref   ]
+	Target mask: [@2223-2424](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@2223-2424](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2223-2424]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2223-2424] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@1617-1818), reference is "myref" (@1617-1818).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@1617-1818  ref myref   ]
+	Target mask: [@1617-1818](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@1617-1818](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1617-1818]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1617-1818] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@1819-2020), reference is "myref" (@1819-2020).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@1819-2020  ref myref   ]
+	Target mask: [@1819-2020](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@1819-2020](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1819-2020]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1819-2020] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@2627-2828), reference is "myref" (@2627-2828).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@2627-2828  ref myref   ]
+	Target mask: [@2627-2828](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@2627-2828](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2627-2828]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2627-2828] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@1011-1212), reference is "myref" (@1011-1212).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@1011-1212  ref myref   ]
+	Target mask: [@1011-1212](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@1011-1212](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1011-1212]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1011-1212] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@1415-1616), reference is "myref" (@1415-1616).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@1415-1616  ref myref   ]
+	Target mask: [@1415-1616](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@1415-1616](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1415-1616]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1415-1616] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@2829-3030), reference is "myref" (@2829-3030).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@2829-3030  ref myref   ]
+	Target mask: [@2829-3030](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@2829-3030](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2829-3030]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2829-3030] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+	Setting active reference for distance-based masks: 'myref'
+    RMSD: (@3031-3232), reference is "myref" (@3031-3232).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+.....................................................
+ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
+  0: [@3031-3232  ref myref   ]
+	Target mask: [@3031-3232](202)
+	Reference topology: system_reduced_all_MDtraj.pdb
+	Reference mask: [@3031-3232](202)
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@3031-3232]
+	Solvent atoms will be specified by [:ION]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@3031-3232] corresponds to 202 atoms.
+	Mask [:ION] corresponds to 1800 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1617-1818]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1617-1818] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@809-1010]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@809-1010] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2223-2424]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2223-2424] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2425-2626]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2425-2626] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@405-606]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@405-606] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1213-1414]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1213-1414] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1819-2020]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1819-2020] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1415-1616]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1415-1616] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2021-2222]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2021-2222] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2829-3030]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2829-3030] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@607-808]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@607-808] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
     WATERSHELL:
 	The first shell will contain solvent < 3.400 angstroms from
 	  the solute; the second shell < 5.000 angstroms...
@@ -81,4 +586,38 @@ ACTION SETUP FOR PARM 'system_reduced_all_MDtraj.pdb' (1 actions):
 	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
 	Mask [@203-404] corresponds to 202 atoms.
 	Mask [:W] corresponds to 332826 atoms.
-	Imaging is on.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@3031-3232]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@3031-3232] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@2627-2828]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@2627-2828] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+    WATERSHELL:
+	The first shell will contain solvent < 3.400 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [@1011-1212]
+	Solvent atoms will be specified by [:W]
+	Parallelizing calculation with 32 threads.
+	# solvent molecules in 'lower' shell stored in set 'WS_00000[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00000[upper]'
+	Mask [@1011-1212] corresponds to 202 atoms.
+	Mask [:W] corresponds to 332826 atoms.
+	Imaging is off.
+Time to run = 2680.1847787708975
