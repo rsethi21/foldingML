@@ -2,6 +2,7 @@ numpy
 pandas
 matplotlib
 pytraj
+scikit-learn
 cython
 black
 isort
