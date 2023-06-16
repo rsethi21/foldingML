@@ -76,6 +76,15 @@ def GetTrajData(traj, nStruct):
     ## superpose
     pt.superpose(traj, mask=mask)
 
+    com = pt.center_of_mass(traj, mask=mask)
+    print(com.shape)
+    print(len(com))
+    print(com)
+    print(np.mean(com, axis=0))
+    exit()
+
+
+
     ## compute radgyr
 
     data = pt.radgyr(traj, mask=mask)
@@ -104,7 +113,7 @@ def GetTrajData(traj, nStruct):
 def doit(nStruct, mode=None, case=None):
     if "trajs3" in case:
         caseToProcess = os.path.join(case, "system_reduced_all.pdb")
-        dataSeries = "./data/traj3Series.json"
+        dataSeries = "./traj3.json"
     elif "trajs7" in case:
         caseToProcess = os.path.join(case, "system_reduced_all_MDtraj.pdb")
         dataSeries = "./data/traj7Series.json"
