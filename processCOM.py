@@ -74,7 +74,7 @@ def GetTrajData(traj, nStruct):
     mask = "@%d-%d" % (start, fin)  ############ find out what the d's mean
 
     ## superpose
-    pt.superpose(traj, mask=mask)
+    # pt.superpose(traj, mask=mask)
 
     com = pt.center_of_mass(traj, mask=mask)
 
@@ -107,7 +107,7 @@ def doit(nStruct, mode=None, case=None):
 
         ## saving series data
 
-        with concurrent.futures.ProcessPoolExecutor(max_workers=25) as executor:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
             indices = [i for i in range(1, nStruct+1)]
             results = executor.map(GetTrajData, repeat(traj), indices)
 
