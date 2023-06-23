@@ -1,0 +1,809 @@
+nohup: ignoring input
+Generating data from trajs
+Finding 200 structures
+Processing 200
+processCOM.py:102: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if mode is "generation":
+processCOM.py:127: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif mode is "postprocess":
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+pytraj.TrajectoryIterator, 682 frames: 
+Size: 5.408928 (GB)
+<Topology: 354826 atoms, 343726 residues, 354826 mols, non-PBC>
+           
+Time to run = 2994.8649115250446
